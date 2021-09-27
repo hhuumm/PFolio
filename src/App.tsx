@@ -21,7 +21,7 @@ function App() {
       <div>
       <div className="App-header">Projects</div>
       </div>
-      <div className="App-header" style={{ border: "non" }}>
+      <div className="App-header" style={{ border: "none" }}>
       
         <div style={{ }}>
           
