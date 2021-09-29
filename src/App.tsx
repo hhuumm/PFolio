@@ -13,23 +13,17 @@ function App() {
       <nav className="App-header" style={{ border: "" }}>
         <p>Hamid Ebrahimi</p>
         <p>Software Developer</p>
-        <a href="https://github.com/hhuumm">
-          <i className="fa fa-github" style={{ fontSize: "50px" }}></i>
-        </a>
+      
       </nav>
 
       <div>
       <div className="App-header">Projects</div>
       </div>
-      <div className="App-header" style={{ border: "none" }}>
-      
-        <div style={{ }}>
-          
-          <div className="o2" style={{border:"none"}}>
-            
             <PortfolioList data={portfolioData} />
-          </div>
-        </div>
+      <div className="App-header">
+      <a href="https://github.com/hhuumm">
+          <i className="fa fa-github" style={{ fontSize: "50px" }}></i>
+        </a>
       </div>
     </>
   );
