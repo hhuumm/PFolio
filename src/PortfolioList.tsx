@@ -8,7 +8,7 @@ interface Props {
 }
 
 export const PortfolioList = ({ data }: Props) => (
-  <div style={{ border: "none" }}>
+  <div style={{ border: "solid #282c34", backgroundColor: "#282c34",backgroundBlendMode:"overlay" }}>
     {data.map((piece) => (
       <Card
         text="white"
@@ -16,7 +16,7 @@ export const PortfolioList = ({ data }: Props) => (
           border: "none",
           marginTop: "10%",
           marginBottom: "20%",
-          backgroundColor: "rgb(40,44,52)",
+          backgroundColor: "#282c34",
         }}
       >
         <Card.Header style={{ textAlign: "center", border: "none" }}>
