@@ -16,7 +16,7 @@ function App() {
       
       </nav>
 
-      <div>
+      <div className="App">
       <div className="App-header">Projects</div>
       </div>
             <PortfolioList data={portfolioData} />

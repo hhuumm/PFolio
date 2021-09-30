@@ -18,28 +18,46 @@ export const PortfolioList = ({ data }: Props) => (
     {data.map((piece) => (
       <div
         className="App-Header"
-        style={{ border: "none", margin: "0 auto", marginBottom: "60%" }}
+        style={{ border: "none", width: "100%", marginBottom: "60%" }}
       >
         <Card
           text="white"
           style={{
-            border: "none",
-            marginTop: "10%",
-            marginBottom: "20%",
+            width: "800px",
+            margin: "0 auto",
             backgroundColor: "#282c34",
+            border:"solid white",
+            padding:"22px"
           }}
         >
-          <Card.Header style={{ textAlign: "center", border: "none" }}>
+          <Card.Header
+            style={{
+              textAlign: "center",
+              border: "none",
+              marginTop: "10px",
+              marginBottom: "20px",
+            }}
+          >
             <a href={piece.projectUrl}> {piece.projectName}</a>
           </Card.Header>
 
-          <Card.Subtitle style={{ border: "none" }}>
+          <Card.Subtitle style={{ border: "none", marginTop: "0px" }}>
             {piece.description}
           </Card.Subtitle>
-          <div className="Tech" style={{ border: "none" }}>
+          <div
+            className="Tech"
+            style={{
+              border: "none",
+              justifyContent: "center",
+              marginTop: "20px",
+            }}
+          >
             {piece.projectTechnologies.map((tech) => {
               return (
-                <div className={tech} style={{ border: "none" }}>
+                <div
+                  className={tech}
+                  style={{ border: "solid", width: "1fr", margin: "0 auto" }}
+                >
                   {tech}
                 </div>
               );
