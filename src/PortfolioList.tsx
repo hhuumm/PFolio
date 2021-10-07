@@ -3,6 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Card from "react-bootstrap/Card";
 import { PortfolioData } from "./PortfolioData";
 
+
 interface Props {
   data: PortfolioData[];
 }
@@ -27,8 +28,10 @@ export const PortfolioList = ({ data }: Props) => (
             margin: "0 auto",
             backgroundColor: "#282c34",
             border:"solid white",
-            padding:"22px"
+            padding:"22px",
+            
           }}
+          onScroll={(e)=>{e.currentTarget.style.animation="fade-in"}}
         >
           <Card.Header
             style={{
@@ -68,3 +71,4 @@ export const PortfolioList = ({ data }: Props) => (
     ))}
   </div>
 );
+
