@@ -2,8 +2,8 @@
   text-align: center;
 }
 
-body{
-  background-Color: "#282c34"
+body {
+  background-color: "#282c34";
 }
 
 .App-logo {
@@ -43,9 +43,17 @@ body{
 .Tech {
   display: flex;
   border: solid black;
- text-align: center;
+  text-align: center;
 }
-.MongoDB, .Express ,.React,.NodeJS,.HTML,.CSS,.Django,.Python,.PostGres{
+.MongoDB,
+.Express,
+.React,
+.NodeJS,
+.HTML,
+.CSS,
+.Django,
+.Python,
+.PostGres {
   border: solid black;
   height: 50px;
   width: 200px;
@@ -77,5 +85,14 @@ body{
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
