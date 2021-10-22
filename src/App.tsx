@@ -7,17 +7,15 @@ import { getPortfolioData } from "./PortfolioData";
 
 function App() {
   const portfolioData = getPortfolioData();
-  
+  console.log(portfolioData)
 
   return (
     <>
-      <header id="header">
-				<h1>Big Picture</h1>
-				<nav>
-					<ul>
-						<li><a href="#intro">Intro</a></li>
-						<li><a href="#one">What I Do</a></li>
-						<li><a href="#two">Who I Am</a></li>
+      <header id="header" >
+				<nav >
+					<ul >
+						<li><a href="#intro">Home</a></li>
+						<li><a href="#one">About Me</a></li>
 						<li><a href="#work">My Work</a></li>
 						<li><a href="#contact">Contact</a></li>
 					</ul>
@@ -27,12 +25,12 @@ function App() {
 		
 			<section id="intro" className="main style1 dark fullscreen">
 				<div className="content">
-					<header>
-						<h2>Hamid Ebrahimi</h2>
+					<header style={{marginBottom:"50%"}}>
+						<h2 style={{marginTop:"30%"}}>Hamid Ebrahimi</h2>
+            <strong>Software Developer</strong>
 					</header>
-					<p> <strong>Software Developer</strong> </p>
 					<footer>
-						<a href="#one" className="button style2 down">More</a>
+						
 					</footer>
 				</div>
 			</section>
@@ -43,37 +41,42 @@ function App() {
 					<header>
 						<h2>About Me</h2>
 					</header>
-					<p>Lorem ipsum dolor sit amet et sapien sed elementum egestas dolore condimentum.
-					Fusce blandit ultrices sapien, in accumsan orci rhoncus eu. Sed sodales venenatis arcu,
-					id varius justo euismod in. Curabitur egestas consectetur magna.</p>
+					<p>
+            A versatile software developer that understands programming fundamentals.
+            Currently pursuing a Bachelors in Electrical Engineering at Rutgers University. 
+            Recent graduate of General Assembly’s software immersion course. 
+            This course provided me great experience and helped diversify my already wide array of programming skills. 
+            I am very eager to work with anyone looking to create a website or set up a web infrastructure.<br />
+          </p>
 				</div>
-				<a href="#two" className="button style2 down anchored">Next</a>
-			</section>
-
-		
-			<section id="two" className="main style2 left dark fullscreen">
-				<div className="content box style2">
-					<header>
-						<h2>Who I Am</h2>
-					</header>
-					<p>Lorem ipsum dolor sit amet et sapien sed elementum egestas dolore condimentum.
-					Fusce blandit ultrices sapien, in accumsan orci rhoncus eu. Sed sodales venenatis arcu,
-					id varius justo euismod in. Curabitur egestas consectetur magna.</p>
-				</div>
-				<a href="#work" className="button style2 down anchored">Next</a>
 			</section>
 
 		
 			<section id="work" className="main style3 primary">
 				<div className="content">
 					<header>
-						<h2>My Work</h2>
-						<p>Lorem ipsum dolor sit amet et sapien sed elementum egestas dolore condimentum.
-						Fusce blandit ultrices sapien, in accumsan orci rhoncus eu. Sed sodales venenatis
-						arcu, id varius justo euismod in. Curabitur egestas consectetur magna vitae.</p>
+						<h2>Skills</h2>
 					</header>
-
-			
+            <div style={{}}>
+                <i className="fab fa-react fa-lg" style={{display:"inline-block"}}><label style={{fontSize:"small"}}>React</label></i>
+                <i className="fab fa-html5 fa-lg" style={{display:"inline-block"}}> <label style={{fontSize:"small"}}>HTML</label></i>
+                <i className="fab fa-js-square fa-2x" style={{display:"inline-block"}}><label></label></i>
+                <i className="fab fa-node fa-2x" style={{display:"inline-block"}}></i>
+                <i className="fab fa-bootstrap fa-lg" style={{display:"inline-block"}}><label style={{fontSize:"x-small"}}>BootStrap</label></i>
+                <i className="fas fa-database fa-lg" style={{display:"inline-block"}}><label style={{fontSize:"xx-small"}}>Mongo</label></i>
+                <i className="fas fa-server fa-lg" style={{display:"inline-block"}}><label style={{fontSize:"x-small"}}>Azure</label></i>
+                <i className="fas fa-server fa-lg" style={{display:"inline-block"}}><label style={{fontSize:"x-small"}}>AWS</label></i>
+                <i className="fab fa-windows fa-lg" style={{display:"inline-block"}}><label style={{fontSize:"x-small"}}>Windows</label></i>
+                <i className="fab fa-linux fa-lg" style={{display:"inline-block"}}><label style={{fontSize:"x-small"}}>Linux</label></i>
+                <i className="fab fa-apple fa-lg" style={{display:"inline-block"}}><label style={{fontSize:"x-small"}}>Mac</label></i>
+            </div>
+          </div>
+          </section>
+          <section id="gallery" className="main style3 primary">
+          <div className="content">
+					<header>
+						<h2>Projects</h2>
+					</header>
 						<div className="gallery">
 							<article className="from-left">
 								<a href="images/fulls/01.jpg" className="image fit"><img src="images/thumbs/01.jpg" title="The Anonymous Red" alt="" /></a>
@@ -94,8 +97,9 @@ function App() {
 								<a href="images/fulls/06.jpg" className="image fit"><img src="images/thumbs/06.jpg" title="Bent IX" alt="" /></a>
 							</article>
 						</div>
+            </div>
 
-				</div>
+				
 			</section>
 
 		
@@ -125,18 +129,11 @@ function App() {
 
 			
 					<ul className="icons">
-						<li><a href="#" className="icon brands fa-twitter"><span className="label">Twitter</span></a></li>
-						<li><a href="#" className="icon brands fa-facebook-f"><span className="label">Facebook</span></a></li>
-						<li><a href="#" className="icon brands fa-instagram"><span className="label">Instagram</span></a></li>
 						<li><a href="#" className="icon brands fa-linkedin-in"><span className="label">LinkedIn</span></a></li>
-						<li><a href="#" className="icon brands fa-dribbble"><span className="label">Dribbble</span></a></li>
-						<li><a href="#" className="icon brands fa-pinterest"><span className="label">Pinterest</span></a></li>
+						<li><a href="#" className="icon brands fa-github"><span className="label">Dribbble</span></a></li>
 					</ul>
 
 				
-					<ul className="menu">
-						<li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
-					</ul>
 
 			</footer>
     </>

@@ -79,6 +79,10 @@ body {
   color: #61dafb;
 }
 
+.fab, .fas
+{
+  margin-right:4%;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
