@@ -53,23 +53,54 @@ function App() {
 			</section>
 
 		
-			<section id="work" className="main style2 fullscreen">
+			<section id="work" className="main style3 fullscreen">
 				<div className="content">
 					<header>
 						<h2>Skills</h2>
 					</header>
             <div style={{}}>
-                <i className="fab fa-react fa-lg" style={{display:"inline-block"}}><label style={{fontSize:"small"}}>React</label></i>
-                <i className="fab fa-html5 fa-lg" style={{display:"inline-block"}}> <label style={{fontSize:"small"}}>HTML</label></i>
-                <i className="fab fa-js-square fa-2x" style={{display:"inline-block"}}><label></label></i>
-                <i className="fab fa-node fa-2x" style={{display:"inline-block"}}></i>
-                <i className="fab fa-bootstrap fa-lg" style={{display:"inline-block"}}><label style={{fontSize:"x-small"}}>BootStrap</label></i>
-                <i className="fas fa-database fa-lg" style={{display:"inline-block"}}><label style={{fontSize:"xx-small"}}>Mongo</label></i>
-                <i className="fas fa-server fa-lg" style={{display:"inline-block"}}><label style={{fontSize:"x-small"}}>Azure</label></i>
-                <i className="fas fa-server fa-lg" style={{display:"inline-block"}}><label style={{fontSize:"x-small"}}>AWS</label></i>
-                <i className="fab fa-windows fa-lg" style={{display:"inline-block"}}><label style={{fontSize:"x-small"}}>Windows</label></i>
-                <i className="fab fa-linux fa-lg" style={{display:"inline-block"}}><label style={{fontSize:"x-small"}}>Linux</label></i>
-                <i className="fab fa-apple fa-lg" style={{display:"inline-block"}}><label style={{fontSize:"x-small"}}>Mac</label></i>
+				<table>
+				<tr>
+					<td>
+					<i className="fab fa-react fa-2x" style={{display:"inline-block"}}><label style={{fontSize:"small"}}>React</label></i>
+                	<i className="fab fa-html5 fa-2x" style={{display:"inline-block"}}> <label style={{fontSize:"small"}}>HTML</label></i>
+					<i className="fab fa-js-square fa-3x" style={{display:"inline-block"}}><label></label></i>
+					<i className="fab fa-node fa-3x" style={{display:"inline-block"}}></i>
+					<i className="fab fa-microsoft fa-2x" style={{display:"inline-block"}}><label style={{fontSize:"small"}}>ASP NET</label></i>
+					</td>
+
+				</tr>
+
+				<tr>
+					<i className="fas fa-database fa-3x" style={{display:"inline-block"}}><label style={{fontSize:"small"}}>Mongo</label></i>
+					<i className="fas fa-database fa-3x" style={{display:"inline-block"}}><label style={{fontSize:"small"}}>POSTGRES</label></i>
+					<i className="fas fa-database fa-3x" style={{display:"inline-block"}}><label style={{fontSize:"small"}}>FIREBASE</label></i>
+					<i className="fas fa-database fa-3x" style={{display:"inline-block"}}><label style={{fontSize:"small"}}>SQL</label></i>
+
+
+				</tr>
+
+				<tr>
+					<i className="fas fa-server fa-2x" style={{display:"inline-block"}}><label style={{fontSize:"x-small"}}>Azure</label></i>
+					<i className="fas fa-server fa-2x" style={{display:"inline-block"}}><label style={{fontSize:"x-small"}}>AWS</label></i>
+					<i className="fas fa-server fa-2x" style={{display:"inline-block"}}><label style={{fontSize:"x-small"}}>Heroku</label></i>
+					<i className="fas fa-server fa-2x" style={{display:"inline-block"}}><label style={{fontSize:"x-small"}}>Netlify</label></i>
+
+				</tr>
+
+                
+				<tr>
+					<i className="fab fa-windows fa-2x" style={{display:"inline-block"}}><label style={{fontSize:"x-small"}}>Windows</label></i>
+                	<i className="fab fa-linux fa-2x" style={{display:"inline-block"}}><label style={{fontSize:"x-small"}}>Linux</label></i>
+				</tr>
+               
+				<tr>
+					<i className="fab fa-apple fa-lg" style={{display:"inline-block"}}><label style={{fontSize:"x-small"}}>Mac</label></i>
+
+				</tr>
+                
+                
+				</table>
             </div>
           </div>
           </section>
@@ -83,40 +114,37 @@ function App() {
 							portfolioData.map((project,index)=>{
 								let indx=(index+1)%2
 								if(indx===0)
-								{return(
+								{
+									return(
 									<article className="from-right">
-									<a href={project.projectUrl} className="image fit"onMouseOver={(e)=>{e.currentTarget.style.opacity="100%"}} onMouseLeave={(e)=>{e.currentTarget.style.opacity="70%"}}style={{height:"100%",textDecoration:"none", width:"100%",color:project.fontColor,backgroundImage:`url(${project.iconPhotoURL.toString()})`,opacity:"70%" }}> 
-									<h2 style={{padding: "25% 0"}}>{project.projectName}</ h2>
-									</a>
+										<a 
+											href={project.projectUrl} className="image fit"
+											onMouseOver={(e)=>{e.currentTarget.style.opacity="100%"}} 
+											onMouseLeave={(e)=>{e.currentTarget.style.opacity="70%"}}
+											style={{height:"100%",textDecoration:"none", width:"100%",color:project.fontColor,backgroundImage:`url(${project.iconPhotoURL.toString()})`,opacity:"70%" }}> 
+										<h2 style={{padding: "25% 0"}}>{project.projectName}</ h2>
+										</a>
 									</article>)
 								}
-								else{
+								else
+								{
+
 									return(
 									<article className="from-left">
-										<a href={project.projectUrl} className="image fit" title="" onMouseOver={(e)=>{e.currentTarget.style.opacity="100%"}} onMouseLeave={(e)=>{e.currentTarget.style.opacity="70%"}} style={{height:"100%",width:"100%",textDecoration:"none",color:project.fontColor, padding: "25% 0", backgroundImage:`url(${project.iconPhotoURL.toString()})`, opacity:"70%",}}><h2>{project.projectName}</ h2></a>
+										<a 
+											href={project.projectUrl} 
+											className="image fit" title="" 
+											onMouseOver={(e)=>{e.currentTarget.style.opacity="100%"}} 
+											onMouseLeave={(e)=>{e.currentTarget.style.opacity="70%"}} 
+											style={{height:"100%",width:"100%",textDecoration:"none", color:project.fontColor, padding: "25% 0", backgroundImage:`url(${project.iconPhotoURL.toString()})`, opacity:"70%",}}>
+											<h2>
+												{project.projectName}
+											</ h2>
+										</a>
 									</article>
 									)
 								}})
 							}
-						
-							{/* <article className="from-left">
-								<a href="images/fulls/01.jpg" className="image fit" title="WTF" style={{height:"100%", padding: "25% 0"}}><p>HoopN</p></a>
-							</article>
-							<article className="from-right">
-								<a href="images/fulls/02.jpg" className="image fit"><img src="images/thumbs/02.jpg" title="Airchitecture II" alt="" /></a>
-							</article>
-							<article className="from-left">
-								<a href="images/fulls/03.jpg" className="image fit"><img src="images/thumbs/03.jpg" title="Air Lounge" alt="" /></a>
-							</article>
-							<article className="from-right">
-								<a href="images/fulls/04.jpg" className="image fit"><img src="images/thumbs/04.jpg" title="Carry on" alt="" /></a>
-							</article>
-							<article className="from-left">
-								<a href="images/fulls/05.jpg" className="image fit"><img src="images/thumbs/05.jpg" title="The sparkling shell" alt="" /></a>
-							</article>
-							<article className="from-right">
-								<a href="images/fulls/06.jpg" className="image fit"><img src="images/thumbs/06.jpg" title="Bent IX" alt="" /></a>
-							</article> */}
 						</div>
             </div>
 
@@ -127,8 +155,8 @@ function App() {
 			<section id="contact" className="main style3 secondary">
 				<div className="content">
 					<header>
-						<h2>Say Hello.</h2>
-						<p>Lorem ipsum dolor sit amet et sapien sed elementum egestas dolore condimentum.</p>
+						<h2>Email</h2>
+						<p>For any business inqueries, please fill our the form below.</p>
 					</header>
 					<div className="box">
 						<form method="post" action="#">
