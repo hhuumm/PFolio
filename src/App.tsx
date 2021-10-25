@@ -4,6 +4,7 @@ import "./App.css";
 import { Card } from "react-bootstrap";
 import { PortfolioList } from "./PortfolioList";
 import { getPortfolioData } from "./PortfolioData";
+import { url } from "inspector";
 
 function App() {
   const portfolioData = getPortfolioData();
@@ -27,7 +28,7 @@ function App() {
 				<div className="content">
 					<header style={{marginBottom:"50%"}}>
 						<h2 style={{marginTop:"30%"}}>Hamid Ebrahimi</h2>
-            <strong>Software Developer</strong>
+            		<strong>Software Developer</strong>
 					</header>
 					<footer>
 						
@@ -42,17 +43,17 @@ function App() {
 						<h2>About Me</h2>
 					</header>
 					<p>
-            A versatile software developer that understands programming fundamentals.
-            Currently pursuing a Bachelors in Electrical Engineering at Rutgers University. 
-            Recent graduate of General Assembly’s software immersion course. 
-            This course provided me great experience and helped diversify my already wide array of programming skills. 
-            I am very eager to work with anyone looking to create a website or set up a web infrastructure.<br />
-          </p>
+						A versatile software developer that understands programming fundamentals.
+						Currently pursuing a Bachelors in Electrical Engineering at Rutgers University. 
+						Recent graduate of General Assembly’s software immersion course. 
+						This course provided me great experience and helped diversify my already wide array of programming skills. 
+						I am very eager to work with anyone looking to create a website or set up a web infrastructure.<br />
+          		  </p>
 				</div>
 			</section>
 
 		
-			<section id="work" className="main style3 primary">
+			<section id="work" className="main style2 fullscreen">
 				<div className="content">
 					<header>
 						<h2>Skills</h2>
@@ -78,8 +79,28 @@ function App() {
 						<h2>Projects</h2>
 					</header>
 						<div className="gallery">
-							<article className="from-left">
-								<a href="images/fulls/01.jpg" className="image fit"><img src="images/thumbs/01.jpg" title="The Anonymous Red" alt="" /></a>
+							{
+							portfolioData.map((project,index)=>{
+								let indx=(index+1)%2
+								if(indx===0)
+								{return(
+									<article className="from-right">
+									<a href={project.projectUrl} className="image fit "style={{height:"100%", width:"100%",backgroundImage:`url(${project.iconPhotoURL.toString()})` }}> 
+									<h2 style={{padding: "25% 0"}}>{project.projectName}</ h2>
+									</a>
+									</article>)
+								}
+								else{
+									return(
+									<article className="from-left">
+										<a href={project.projectUrl} className="image fit" title="" style={{height:"100%",width:"100%", padding: "25% 0", backgroundImage:`url(${project.iconPhotoURL.toString()})`}}><h2>{project.projectName}</ h2></a>
+									</article>
+									)
+								}})
+							}
+						
+							{/* <article className="from-left">
+								<a href="images/fulls/01.jpg" className="image fit" title="WTF" style={{height:"100%", padding: "25% 0"}}><p>HoopN</p></a>
 							</article>
 							<article className="from-right">
 								<a href="images/fulls/02.jpg" className="image fit"><img src="images/thumbs/02.jpg" title="Airchitecture II" alt="" /></a>
@@ -95,7 +116,7 @@ function App() {
 							</article>
 							<article className="from-right">
 								<a href="images/fulls/06.jpg" className="image fit"><img src="images/thumbs/06.jpg" title="Bent IX" alt="" /></a>
-							</article>
+							</article> */}
 						</div>
             </div>
 
