@@ -85,7 +85,7 @@ function App() {
 								if(indx===0)
 								{return(
 									<article className="from-right">
-									<a href={project.projectUrl} className="image fit "style={{height:"100%",textDecoration:"none", width:"100%",color:project.fontColor,backgroundImage:`url(${project.iconPhotoURL.toString()})` }}> 
+									<a href={project.projectUrl} className="image fit"onMouseOver={(e)=>{e.currentTarget.style.opacity="100%"}} onMouseLeave={(e)=>{e.currentTarget.style.opacity="70%"}}style={{height:"100%",textDecoration:"none", width:"100%",color:project.fontColor,backgroundImage:`url(${project.iconPhotoURL.toString()})`,opacity:"70%" }}> 
 									<h2 style={{padding: "25% 0"}}>{project.projectName}</ h2>
 									</a>
 									</article>)
@@ -93,7 +93,7 @@ function App() {
 								else{
 									return(
 									<article className="from-left">
-										<a href={project.projectUrl} className="image fit" title="" style={{height:"100%",width:"100%",textDecoration:"none",color:project.fontColor, padding: "25% 0", backgroundImage:`url(${project.iconPhotoURL.toString()})`}}><h2>{project.projectName}</ h2></a>
+										<a href={project.projectUrl} className="image fit" title="" onMouseOver={(e)=>{e.currentTarget.style.opacity="100%"}} onMouseLeave={(e)=>{e.currentTarget.style.opacity="70%"}} style={{height:"100%",width:"100%",textDecoration:"none",color:project.fontColor, padding: "25% 0", backgroundImage:`url(${project.iconPhotoURL.toString()})`, opacity:"70%",}}><h2>{project.projectName}</ h2></a>
 									</article>
 									)
 								}})
