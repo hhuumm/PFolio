@@ -91,10 +91,10 @@ function App() {
 			</section>
 
 		
-			<section id="work" className="main style3 fullscreen">
+			<section id="work" className="main style1 fullscreen">
 				<div className="content">
 					<header>
-						<h2>Skills</h2>
+						<h2 style={{marginBottom:"25%"}}>Skills</h2>
 					</header>
             <div style={{}}>
 				<table>
@@ -233,12 +233,12 @@ function App() {
 			</section>
 
 		
-			<footer id="footer">
+			<footer id="footer" style ={{display:"flex",justifyContent:"center"}}>
 
 			
-					<ul className="icons">
-						<li><a href="#" className="icon brands fa-linkedin-in"><span className="label">LinkedIn</span></a></li>
-						<li><a href="#" className="icon brands fa-github"><span className="label">Dribbble</span></a></li>
+					<ul className="icons" >
+						<li><a style ={{}} href="https://www.linkedin.com/in/hesolutions/" className="icon brands fa-linkedin-in fa-2x"><span className="label">LinkedIn</span></a></li>
+						<li><a style= {{}} href="https://github.com/hhuumm" className="icon brands fa-github fa-2x"><span className="label">Dribbble</span></a></li>
 					</ul>
 
 				
