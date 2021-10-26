@@ -15,10 +15,7 @@ function App() {
 	const[sent,setSent]=useState(false)
 	const[error,setError]=useState(false)
 	const portfolioData = getPortfolioData();
-	useEffect(()=>{
 
-
-	})
   const sendEmail=
   	( e: React.FormEvent<HTMLFormElement>)=>
 	{
@@ -43,23 +40,13 @@ function App() {
 			{
 				
 				setError(true);
-          		console.log(error.text);
       		});
 			  setSent(true);
   	}
 
   return (
     <>
-      <header id="header" >
-				<nav >
-					<ul >
-						<li><a href="#intro">Home</a></li>
-						<li><a href="#one">About Me</a></li>
-						<li><a href="#work">My Work</a></li>
-						<li><a href="#contact">Contact</a></li>
-					</ul>
-				</nav>
-			</header>
+     
 
 		
 			<section id="intro" className="main style1 dark fullscreen">
@@ -91,7 +78,7 @@ function App() {
 			</section>
 
 		
-			<section id="work" className="main style1 fullscreen">
+			<section id="skills" className="main style1 fullscreen">
 				<div className="content">
 					<header>
 						<h2 style={{marginBottom:"25%"}}>Skills</h2>
@@ -196,7 +183,7 @@ function App() {
 					<>
 					<header>
 						<h2>Email</h2>
-						<p>For any business inqueries, please fill our the form below.</p>
+						<p>For business inqueries, please fill out the form below.</p>
 					</header>
 					<div className="box">
 						<form
