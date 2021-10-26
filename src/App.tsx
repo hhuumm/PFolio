@@ -1,14 +1,52 @@
-import React from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import { Card } from "react-bootstrap";
 import { PortfolioList } from "./PortfolioList";
 import { getPortfolioData } from "./PortfolioData";
 import { url } from "inspector";
+import emailjs from 'emailjs-com';
+import React , {useState,useEffect} from 'react';
+
 
 function App() {
-  const portfolioData = getPortfolioData();
-  console.log(portfolioData)
+	const[name, setName]=useState('');
+	const[message,setMessage]=useState('');
+	const[email,setEmail]=useState('')
+	const[sent,setSent]=useState(false)
+	const[error,setError]=useState(false)
+	const portfolioData = getPortfolioData();
+	useEffect(()=>{
+
+
+	})
+  const sendEmail=
+  	( e: React.FormEvent<HTMLFormElement>)=>
+	{
+	    e.preventDefault();
+
+		
+		let data={
+			"name":name,
+			"email":email,
+			"message":message
+		}
+
+		console.log(data);
+
+
+    	emailjs.sendForm('service_a9ssjx8', 'template_52cbgy7', e.currentTarget, 'user_tLF3B8hwwPaXlOiFzeL0m')
+      	.then((result) => 
+		  	{
+        		console.log(result.text);
+      		}, 
+		(error) => 
+			{
+				
+				setError(true);
+          		console.log(error.text);
+      		});
+			  setSent(true);
+  	}
 
   return (
     <>
@@ -154,22 +192,43 @@ function App() {
 		
 			<section id="contact" className="main style3 secondary">
 				<div className="content">
+					{!sent?
+					<>
 					<header>
 						<h2>Email</h2>
 						<p>For any business inqueries, please fill our the form below.</p>
 					</header>
 					<div className="box">
-						<form method="post" action="#">
+						<form
+						  onSubmit={sendEmail}>
 							<div className="fields">
-								<div className="field half"><input type="text" name="name" placeholder="Name" /></div>
-								<div className="field half"><input type="email" name="email" placeholder="Email" /></div>
-								<div className="field"><textarea name="message" placeholder="Message"  rows={6}></textarea></div>
+								<div className="field half"><input type="text" onChange={(e) => setName(e.target.value)} name="name" placeholder="Name" /></div>
+								<div className="field half"><input type="email"  onChange={(e) => setEmail(e.target.value)} name="email" placeholder="Email" /></div>
+								<div className="field"><textarea name="message" onChange={(e) => setMessage(e.target.value)} placeholder="Message"  rows={6}></textarea></div>
 							</div>
 							<ul className="actions special">
 								<li><input type="submit" value="Send Message" /></li>
 							</ul>
 						</form>
 					</div>
+					</>
+					:
+					<>
+						{error?
+						
+								<header>
+									<h2 style={{color:"#ff0033",opacity:"75%"}}>Something Went Wrong</h2>
+									
+								</header>
+						:
+								<header>
+									<h3 style={{color:"#71C562",opacity:"75%"}}>Your Message Has Been Sent, Thank You for Your Time</h3>
+									
+								</header>
+						}
+
+					</>
+					}
 				</div>
 			</section>
 
