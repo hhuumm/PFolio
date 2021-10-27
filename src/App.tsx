@@ -62,7 +62,7 @@ function App() {
 			</section>
 
 		
-			<section id="one" className="main style2 right dark fullscreen">
+			<section id="one" className="main style2 right dark fullscreen" style={{paddingTop:"12.5%",paddingBottom:"12.5%"}}>
 				<div className="content box style2">
 					<header>
 						<h2>About Me</h2>
@@ -78,12 +78,12 @@ function App() {
 			</section>
 
 		
-			<section id="skills" className="main style1 fullscreen">
+			<section id="skills" className="main style1 fullscreen" style={{paddingTop:"20%",paddingBottom:"15%"}}>
 				<div className="content">
 					<header>
-						<h2 style={{marginBottom:"25%"}}>Skills</h2>
+						<h2 >Skills</h2>
 					</header>
-            <div style={{}}>
+            <div style={{marginLeft:"5%"}}>
 				<table>
 				<tr>
 					<td>
@@ -129,7 +129,7 @@ function App() {
             </div>
           </div>
           </section>
-          <section id="gallery" className="main style3 primary">
+          <section id="gallery" className="main style3 primary" style={{marginTop:"0"}}>
           <div className="content">
 					<header>
 						<h2>Projects</h2>

@@ -90,6 +90,7 @@ input, select, textarea {
 		box-sizing: inherit;
 	}
 
+
 	body {
 		background: #ffffff;
 		height: 100%;
@@ -439,7 +440,6 @@ input, select, textarea {
 			font-weight: normal;
 			text-transform: none !important;
 			color: #e5e6e7;
-			content: '\f1ce';
 			cursor: default;
 			display: block;
 			font-size: 2em;
