@@ -79,6 +79,24 @@ const portfolioData: PortfolioData[] = [
     iconPhotoURL: "https://www.netclipart.com/pp/m/96-965213_transparent-answer-question-questions-and-answers-logo.png",
     fontColor:"Grey"
   },
+{
+  projectName: "ECommerce",
+    projectUrl: "https://hamecommerce.azurewebsites.net/",
+    github: "https://github.com/hhuumm/EShop",
+    projectTechnologies: [
+      "Firebase",
+      "Javascript",
+      "React",
+      "HTML",
+      "CSS",
+      "Azure",
+      "Blob Bucket",
+    ],
+    description:
+      "This is an Ecommerce storefront using Firebase as the blob/data storage as well as authentication.",
+    iconPhotoURL: "https://i.imgur.com/z1ybEZ6.png",
+    fontColor:"Black"
+}
 ];
 
 export const getPortfolioData = (): PortfolioData[] => {
