@@ -2,6 +2,10 @@
   text-align: center;
 }
 
+body {
+  background-color: "#282c34";
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -39,9 +43,17 @@
 .Tech {
   display: flex;
   border: solid black;
- text-align: center;
+  text-align: center;
 }
-.MongoDB, .Express ,.React,.NodeJS,.HTML,.CSS,.Django,.Python,.PostGres{
+.MongoDB,
+.Express,
+.React,
+.NodeJS,
+.HTML,
+.CSS,
+.Django,
+.Python,
+.PostGres {
   border: solid black;
   height: 50px;
   width: 200px;
@@ -67,11 +79,24 @@
   color: #61dafb;
 }
 
+.fab, .fas
+{
+  margin-right:4%;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
