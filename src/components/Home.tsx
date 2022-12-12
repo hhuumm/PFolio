@@ -5,6 +5,7 @@ import { PortfolioList } from "../PortfolioList";
 import { getPortfolioData } from "../PortfolioData";
 import { url } from "inspector";
 import emailjs from "emailjs-com";
+import {Link} from "react-router-dom";
 import React, { useState, useEffect } from "react";
 
 function Home() {
@@ -116,7 +117,6 @@ function Home() {
                     className="fab fa-js-square fa-3x"
                     style={{ display: "inline-block" }}
                   >
-                    <label></label>
                   </i>
                   <i
                     className="fab fa-node fa-3x"
@@ -227,8 +227,8 @@ function Home() {
               if (indx === 0) {
                 return (
                   <article className="from-right">
-                    <a
-                      href={project.projectUrl}
+                    <Link
+                      to={"projects/" + (index+1) + "/"}
                       className="image fit"
                       onMouseOver={(e) => {
                         e.currentTarget.style.opacity = "100%";
@@ -248,14 +248,14 @@ function Home() {
                       <h2 style={{ padding: "25% 0" }}>
                         {project.projectName}
                       </h2>
-                    </a>
+                    </Link>
                   </article>
                 );
               } else {
                 return (
                   <article className="from-left">
-                    <a
-                      href={project.projectUrl}
+                    <Link
+                      to={"projects/" + (index+1) + "/"}
                       className="image fit"
                       title=""
                       onMouseOver={(e) => {
@@ -275,7 +275,7 @@ function Home() {
                       }}
                     >
                       <h2>{project.projectName}</h2>
-                    </a>
+                    </Link>
                   </article>
                 );
               }
