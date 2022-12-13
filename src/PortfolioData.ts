@@ -7,6 +7,8 @@ export interface PortfolioData {
   iconPhotoURL: string;
   fontColor: string;
   id: number;
+  guestUsername?: string;
+  guestPassword?: string;
 }
 
 const portfolioData: PortfolioData[] = [
@@ -67,7 +69,7 @@ const portfolioData: PortfolioData[] = [
     id: 3,
   },
   {
-    projectName: "QandA",
+    projectName: "Q&A",
     projectUrl: "https://qunda.azurewebsites.net/",
     github: "https://github.com/hhuumm/QandA",
     projectTechnologies: [
@@ -104,6 +106,9 @@ const portfolioData: PortfolioData[] = [
     iconPhotoURL: "https://i.imgur.com/z1ybEZ6.png",
     fontColor: "Black",
     id: 5,
+    guestUsername: "Test@guest.yes",
+    guestPassword: "Bestguest123",
+
   },
   {
     projectName: "Saatva",

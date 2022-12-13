@@ -47,6 +47,16 @@ return (<>
         <h2>{project?.projectName}</h2>
         </a>
         <p>{project?.description}</p>
+        {project?.guestUsername && (
+        <>
+        <ul>
+        <li> Username: {project?.guestUsername}</li>
+        <li> Password: {project?.guestPassword}</li>
+        </ul>
+        </>)}
+        
+      
+        
         <p>Project Technologies
         <ul>{project?.projectTechnologies.map((tech)=><li>{tech}</li>)}</ul></p>
           </header>
