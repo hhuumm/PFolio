@@ -8,6 +8,10 @@ import Projects from "./components/Projects";
 
 function App() {
 //adding comment so that I can have a change to commit
+//adding comment so that I can have a change to commit
+
+//adding comment so that I can have a change to commit
+
   return (
   <Routes>
     <Route path="/" element={<Home />} />
