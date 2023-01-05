@@ -57,8 +57,6 @@ return (<>
         
       
         
-        <p>Project Technologies
-        <ul>{project?.projectTechnologies.map((tech)=><li>{tech}</li>)}</ul></p>
           </header>
           <footer></footer>
         </div>
