@@ -46,35 +46,32 @@ return (<>
       >
         <h2>{project?.projectName}</h2>
         </a>
+        <h2>Summary</h2>
         <p>{project?.description}</p>
         {project?.guestUsername && (
-        <>
+        
         <ul>
         <li> Username: {project?.guestUsername}</li>
         <li> Password: {project?.guestPassword}</li>
         </ul>
-        </>)}
+        )}
         
+
+        <h2>Technologies Used</h2>
+        <ul className="technolgies">{project?.projectTechnologies.map((tech) => (<li>{tech}</li>))}</ul>
       
         
           </header>
           <footer></footer>
         </div>
-      </section>
-    <div>
+    </section>
 
-    </div>
-<section id="intro" className="main style1 dark fullscreen">
-        <div className="content">
-          <header style={{ marginBottom: "50%" }}>
-         
-          </header>
-          <footer></footer>
-        </div>
-      </section>
-    <div>
+    
+   
 
-    </div>
+    
+ 
+
 </>)
 
   }

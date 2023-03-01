@@ -7,6 +7,7 @@ import { url } from "inspector";
 import emailjs from "emailjs-com";
 import {Link} from "react-router-dom";
 import React, { useState, useEffect } from "react";
+import { getExperienceData } from "../ExperienceData";
 
 function Home() {
   const [name, setName] = useState("");
@@ -15,6 +16,7 @@ function Home() {
   const [sent, setSent] = useState(false);
   const [error, setError] = useState(false);
   const portfolioData = getPortfolioData();
+  const experienceData = getExperienceData();
 
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -57,7 +59,8 @@ function Home() {
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
-    </header>
+      </header>
+
       <section id="intro" className="main style1 dark fullscreen">
         <div className="content">
           <header style={{ marginBottom: "50%" }}>
@@ -78,15 +81,20 @@ function Home() {
             <h2>About Me</h2>
           </header>
           <p>
-            A versatile software developer, with strong understanding of Data
-            Structures and Big O Efficiency. Recent graduate of General Assembly’s 
-            software immersion course, having completed multiple projects along the way.
-            Very eager to help provide technical solutions.
+            I am a software developer with a passion for learning and creating
+            new things. I have foundational background in electronics and have been
+            working with software for over 3 years. Having worked on
+            many projects using different technologies I have gained a lot of
+            experience over a relatively short course of time. With ambitions of learning and becoming 
+            a better developer, I am always looking for new opportunities to
+            learn and grow.I am currently looking for a full time position as a
+            software developer.
             <br />
           </p>
         </div>
       </section>
-
+ 
+  {/* SKILLS */}
       <section
         id="skills"
         className="main style1 fullscreen"
@@ -130,7 +138,6 @@ function Home() {
                   </i>
                 </td>
               </tr>
-
               <tr>
                 <i
                   className="fas fa-database fa-3x"
@@ -157,7 +164,6 @@ function Home() {
                   <label style={{ fontSize: "small" }}>SQL</label>
                 </i>
               </tr>
-
               <tr>
                 <i
                   className="fas fa-server fa-2x"
@@ -184,7 +190,6 @@ function Home() {
                   <label style={{ fontSize: "x-small" }}>Netlify</label>
                 </i>
               </tr>
-
               <tr>
                 <i
                   className="fab fa-windows fa-2x"
@@ -199,7 +204,6 @@ function Home() {
                   <label style={{ fontSize: "x-small" }}>Linux</label>
                 </i>
               </tr>
-
               <tr>
                 <i
                   className="fab fa-apple fa-lg"
@@ -211,7 +215,8 @@ function Home() {
             </table>
           </div>
         </div>
-      </section>
+      </section>   
+  {/* PROJECTS */}
       <section
         id="gallery"
         className="main style3 primary"
@@ -283,7 +288,53 @@ function Home() {
           </div>
         </div>
       </section>
+  {/* EXPERIENCE */}
+      <section  
+        id="gallery"
+        className="main style3 primary"
+        style={{ marginTop: "0" }}
+      >
+        <div className="content">
+         
+          <header>
+            <h2>Experience</h2>
+          </header>
 
+          <div className="gallery">
+              {experienceData.map((project, index) => {
+                let indx = (index + 1) % 2;
+                  return (
+                    <article className="from-bottom">
+                      <a
+                        href={project.projectUrl}
+                        className="image fit"
+                        title=""
+                        onMouseOver={(e) => {
+                          e.currentTarget.style.opacity = "100%";
+                        }}
+                        onMouseLeave={(e) => {
+                          e.currentTarget.style.opacity = "70%";
+                        }}
+                        style={{
+                          height: "100%",
+                          width: "100%",
+                          textDecoration: "none",
+                          color: project.fontColor,
+                          padding: "25% 0",
+                          backgroundImage: `url(${project.iconPhotoURL.toString()})`,
+                          opacity: "70%",
+                        }}
+                      >
+                        <h2>{project.projectName}</h2>
+                      </a>
+                    </article>
+                  );
+              })}
+          </div>
+
+        </div>
+      </section>
+  {/* CONTACT */}
       <section id="contact" className="main style3 secondary">
         <div className="content">
           {!sent ? (
@@ -347,7 +398,7 @@ function Home() {
           )}
         </div>
       </section>
-
+  {/* FOOTER */}
       <footer id="footer" style={{ display: "flex", justifyContent: "center" }}>
         <ul className="icons">
           <li>
