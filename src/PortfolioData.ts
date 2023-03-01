@@ -49,6 +49,7 @@ const portfolioData: PortfolioData[] = [
     fontColor: "Grey",
     id: 2,
   },
+
   {
     projectName: "ECommerce",
     projectUrl: "https://hamecommerce.azurewebsites.net/",
@@ -90,6 +91,7 @@ const portfolioData: PortfolioData[] = [
     fontColor: "Black",
     id: 4,
   },
+
   {
   projectName: "",
   projectUrl: "https://wastewarriors-app-20230112121945.ambitiousgrass-377daf17.westus.azurecontainerapps.io/",
@@ -108,7 +110,8 @@ const portfolioData: PortfolioData[] = [
     "https://upload.wikimedia.org/wikipedia/en/6/6a/Waste_Warriors_Logo.jpg",
   fontColor: "Black",
   id: 5,
-},
+  },
+
   {
     projectName: "ProjectPlanner",
     projectUrl: "https://projplanr.herokuapp.com/",
@@ -128,7 +131,8 @@ const portfolioData: PortfolioData[] = [
     fontColor: "Black",
     id: 6,
   },
-   {
+
+  {
     projectName: "HoopN",
     projectUrl: "https://hoop-n.herokuapp.com/",
     github: "https://github.com/hhuumm/HoopN",
@@ -147,6 +151,7 @@ const portfolioData: PortfolioData[] = [
     fontColor: "White",
     id: 7,
   },
+
   {
     projectName: "RCC Employee Form",
     projectUrl: "http://54.91.159.223:5000/",
@@ -161,11 +166,12 @@ const portfolioData: PortfolioData[] = [
       "AWS",
     ],
     description:
-      "An assessment for the Royal Caribbean, showcasing validation and data storage.",
+      "The RCC Employee Form project is a web application built using Flask and MySQL. This project was completed within a 72-hour assessment and was successfully deployed to AWS. Despite having no prior experience with Flask, the developer was able to deliver a fully functional application that allows RCC employees to fill out an electronic form. Overall, this project showcases the ability to learn quickly and deliver quality work within a tight deadline",
     iconPhotoURL: "https://image-renderer.sinclairstoryline.com/prod/image-renderer/16x9/full/1015/center/80/ce968daf-c587-412c-ab4c-29d0cd71b96c-large16x9_1666094243_RCIICAerialStarboardSideNightCGI02RETV3LR.JPG",
     fontColor: "White",
     id: 8,
   },
+  
 ];
 
 export const getPortfolioData = (): PortfolioData[] => {

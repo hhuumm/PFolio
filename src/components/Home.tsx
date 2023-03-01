@@ -31,7 +31,7 @@ function Home() {
 
     emailjs
       .sendForm(
-        "service_a9ssjx8",
+        "service_9pvsqwi",
         "template_52cbgy7",
         e.currentTarget,
         "user_tLF3B8hwwPaXlOiFzeL0m"
@@ -94,7 +94,7 @@ function Home() {
         </div>
       </section>
  
-  {/* SKILLS */}
+ {/* SKILLS */}
       <section
         id="skills"
         className="main style1 fullscreen"
